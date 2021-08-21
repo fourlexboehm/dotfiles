@@ -17,6 +17,7 @@ alias cast='catt cast'
 alias gcc='gcc -g -Wall -Werror -Wextra '
 alias norm='norminette -R CheckForbiddenSourceHeader'
 alias vimconfig='nvim ~/.config/nvim/init.vim'
+alias sudo='doas'
 
 set -o vi
 
