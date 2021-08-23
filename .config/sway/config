@@ -223,6 +223,21 @@ bindsym $mod+r mode "resize"
  bindsym XF86MonBrightnessDown exec sudo brightnessctl set 5%-
  bindsym XF86MonBrightnessUp exec sudo brightnessctl set +5%
 
+bar {
+    position top
+#	swaybar_command waybar
+    # When the status_command prints a new line to stdout, swaybar updates.
+    # The default just shows the current date and time.
+#    status_command while date +'%d-%m %l:%M:%S %p'; do sleep 1; done
+
+    status_command slstatus -s
+    colors {
+        statusline #ffffff
+        background #323232
+        inactive_workspace #32323200 #32323200 #5c5c5c
+    }
+}
+
 
 include /etc/sway/config.d/*
 exec clipman -d
@@ -236,6 +251,9 @@ for_window [app_id="firefox" title="^Picture-in-Picture$"] \
     floating enable, move position 877 450, sticky enable
 assign [class=""] 9
 
+# Status Bar:
+#
+# Read `man 5 sway-bar` for more information about this section.
 exec firefox
 #exec qutebrowser
 #exec alacritty
