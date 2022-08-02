@@ -1,0 +1,27 @@
+[[language]]
+name = "rust"
+scope = "source.rust"
+injection-regex = "rust"
+file-types = ["rs"]
+roots = ["Cargo.toml", "Cargo.lock"]
+auto-format = true
+comment-token = "//"
+language-server = { command = "rust-analyzer" }
+indent = { tab-width = 1, unit = "\t" }
+
+[language.config.checkOnSave]
+command = "cargo clippy --fix"
+
+[language.debugger]
+name = "lldb-vscode"
+transport = "stdio"
+command = "/Users/alex/.vscode-oss/extensions/vadimcn.vscode-lldb-1.7.0/extension.js"
+
+[[language]]
+name = "c"
+indent = { tab-width = 4, unit = "\t" }
+
+[language.debugger]
+name = "lldb-vscode"
+transport = "stdio"
+command = "/Users/alex/.vscode-oss/extensions/vadimcn.vscode-lldb-1.7.0/extension.js"
