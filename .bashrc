@@ -1,3 +1,4 @@
+
 alias ll='exa -l --color=auto'
 alias la='exa -a --color=auto'
 alias lal='exa -all --color=auto'
@@ -18,8 +19,10 @@ alias gcc='gcc -g -Wall -Werror -Wextra '
 alias norm='norminette -R CheckForbiddenSourceHeader'
 alias vimconfig='nvim ~/.config/nvim/init.vim'
 alias sudo='doas'
+alias python=python3
 
-set -o vi
+#set -o vi
+
 
 export EDITOR=nvim
 export VISUAL=nvim
@@ -47,5 +50,4 @@ if [ "$TERM" = "linux" ]; then
     done
     clear
 fi
-
-
+. "$HOME/.cargo/env"
